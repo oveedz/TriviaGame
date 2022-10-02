@@ -12,12 +12,15 @@ struct TriviaView: View {
     var body: some View {
         if vm.reachedEnd {
             VStack (spacing: 20) {
+                Spacer()
                 Text("Trivia Game")
                     .mainTitle()
                 
                 Text("Congratulations, you finished!")
                 
                 Text("You scored: \(vm.score) out of \(vm.length)")
+                
+                Spacer()
                 
                 Button {
                     Task.init {
@@ -28,7 +31,6 @@ struct TriviaView: View {
                 }
             }
             .backgroundModifier()
-            .padding()
             .foregroundColor(Color("AccentColor"))
         } else {
             QuestionView()

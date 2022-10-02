@@ -13,10 +13,10 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 40) {
                 VStack(spacing: 20) {
-                    Text("The Ultimate Trivia Game")
+                    Text("Trivia Time!")
                         .mainTitle()
                         
-                    Text("Are you ready?")
+                    Text("Ready?")
                         .foregroundColor(Color("AccentColor"))
                 }
                 NavigationLink{

@@ -10,20 +10,20 @@ import SwiftUI
 struct QuestionView: View {
     @EnvironmentObject var vm: TriviaManager
     var body: some View {
-            VStack(spacing: 40) {
+            VStack(spacing: 10) {
+                
                 header
-                    .padding(.horizontal, 36)
                 
                 ProgressBar(progress: vm.progress)
-                    .padding(.horizontal, 38)
                 
                 questions
-                    .padding(.horizontal, 36)
+                
+                Spacer()
+
                 
                 nextButton
                     .disabled(!vm.answerSelected)
                             
-                Spacer()
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -45,9 +45,10 @@ struct QuestionView: View {
     private var questions: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(vm.question)
-                .font(.system(size: 20))
+                .font(.headline)
                 .fontWeight(.heavy)
                 .foregroundColor(.gray)
+                .fixedSize(horizontal: false, vertical: true)
           
             ForEach(vm.answerChoices, id: \.id) { answer in
                 AnswerBox(answer: answer)

@@ -47,7 +47,8 @@ class TriviaManager: ObservableObject {
         
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {fatalError("An error has occurred while fetching data.")}
+            guard (response as? HTTPURLResponse)?.statusCode == 200
+            else {throw APIError.unknown}
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -64,7 +65,7 @@ class TriviaManager: ObservableObject {
                 self.setQuestion()
             }
         } catch {
-            print("Fatal error has occurred \(error)")
+            print("Fatal error has occurred \(error.localizedDescription)")
         }
     }
     

@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    var categories: Result
+    var trivia: Result
     var body: some View {
-        Text(categories.category)
+        Text(trivia.category)
     }
 }
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesView(categories: .dummyData.first!)
+        CategoriesView(trivia: .dummyData.first!)
     }
 }
