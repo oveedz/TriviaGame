@@ -11,19 +11,18 @@ struct AnswerBox: View {
     @EnvironmentObject var vm: TriviaManager
     var answer: AnswerChoices
     @State private var isSelected = false
-    
     var body: some View {
         HStack(spacing: 20) {
             Image(systemName: "circle.fill")
                 .font(.caption)
             Text(answer.text)
                 .bold()
-            if isSelected {
+            if isSelected && !answer.isCorrect {
                 Spacer()
 
-                Image(systemName: answer.isCorrect ? "checkmark.square.fill":"x.square.fill")
-                    .foregroundColor(answer.isCorrect ? Color(.green) : Color(.red))
-            }
+                Image(systemName: "x.circle.fill")
+                    .foregroundColor(Color(.red))
+            } 
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,7 +36,7 @@ struct AnswerBox: View {
             if !vm.answerSelected {
                 isSelected = true
                 vm.selectAnswer(answer: answer)
-            }
+            }            
         }
     }
 }

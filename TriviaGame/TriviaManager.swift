@@ -101,5 +101,4 @@ class TriviaManager: ObservableObject {
             score += 1
         }
     }
-    
 }

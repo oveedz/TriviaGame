@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuestionView: View {
     @EnvironmentObject var vm: TriviaManager
+
     var body: some View {
             VStack(spacing: 10) {
                 
@@ -51,8 +52,17 @@ struct QuestionView: View {
                 .fixedSize(horizontal: false, vertical: true)
           
             ForEach(vm.answerChoices, id: \.id) { answer in
-                AnswerBox(answer: answer)
-                    .environmentObject(vm)
+                HStack {
+                    AnswerBox(answer: answer)
+                        .overlay(alignment: .trailing) {
+                            if answer.isCorrect && vm.answerSelected {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .padding(.horizontal)
+                                    .foregroundColor(.green)
+                            }
+                        }
+                        .environmentObject(vm)
+                }
             }
         
         }
