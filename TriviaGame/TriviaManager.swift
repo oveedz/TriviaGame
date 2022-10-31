@@ -34,6 +34,11 @@ class TriviaManager: ObservableObject {
     @Published private(set) var progress: CGFloat = 0.00
     @Published private(set) var score = 0
     
+    @Published var timeRemaining: Int = 10
+    @Published var circleTrim: CGFloat = 0.00
+
+
+    
     init() {
         Task.init {
            await getTrivia()

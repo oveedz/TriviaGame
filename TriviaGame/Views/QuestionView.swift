@@ -14,8 +14,10 @@ struct QuestionView: View {
             VStack(spacing: 10) {
                 
                 header
-                
+
                 ProgressBar(progress: vm.progress)
+                
+                CountdownView()
                 
                 questions
                 
@@ -71,6 +73,8 @@ struct QuestionView: View {
     private var nextButton: some View {
         Button {
             vm.goToNextQuestion()
+            vm.timeRemaining = 10
+            vm.circleTrim = 0.00
         } label: {
             PrimaryButton(buttonTitle: "Next",
                           buttonBackground: vm.answerSelected ?

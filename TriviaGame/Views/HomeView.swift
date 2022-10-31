@@ -12,19 +12,32 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 40) {
+                Spacer()
+                
                 VStack(spacing: 20) {
+                    
+                    Image(systemName: "brain")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.accentColor)
+                    
                     Text("Trivia Time!")
                         .mainTitle()
                         
                     Text("Ready?")
                         .foregroundColor(Color("AccentColor"))
                 }
+                
+                Spacer()
+                
                 NavigationLink{
                     TriviaView()
                         .environmentObject(vm)
                 } label: {
-                    PrimaryButton(buttonTitle: "Start")
+                    PrimaryButton(buttonTitle: "Get Started")
                 }
+                .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)

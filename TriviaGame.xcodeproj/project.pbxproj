@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C36D493290D9F6D00AE2A37 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36D492290D9F6D00AE2A37 /* CountdownView.swift */; };
 		8C3A8A5328E9988C00FEE389 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A8A5228E9988C00FEE389 /* ErrorView.swift */; };
 		8C804EA8277B7EC3008E354E /* TriviaGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C804EA7277B7EC3008E354E /* TriviaGameApp.swift */; };
 		8C804EAA277B7EC3008E354E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C804EA9277B7EC3008E354E /* HomeView.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C36D492290D9F6D00AE2A37 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		8C3A8A5228E9988C00FEE389 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8C804EA4277B7EC3008E354E /* TriviaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C804EA7277B7EC3008E354E /* TriviaGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaGameApp.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				8CAA47EF277B94CB002D3949 /* PrimaryButton.swift */,
 				8CAA47F6277BF382002D3949 /* ProgressBar.swift */,
 				8CAA47FB277BFF31002D3949 /* AnswerBox.swift */,
+				8C36D492290D9F6D00AE2A37 /* CountdownView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				8CAA482B27822AA1002D3949 /* Trivia.swift in Sources */,
 				8C804EAA277B7EC3008E354E /* HomeView.swift in Sources */,
 				8CAA482D2785B4BA002D3949 /* TriviaManager.swift in Sources */,
+				8C36D493290D9F6D00AE2A37 /* CountdownView.swift in Sources */,
 				8CAA47F0277B94CB002D3949 /* PrimaryButton.swift in Sources */,
 				8CAA47FC277BFF31002D3949 /* AnswerBox.swift in Sources */,
 				8CAA47FA277BFE76002D3949 /* Answer.swift in Sources */,
